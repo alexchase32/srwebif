@@ -12,8 +12,11 @@ const questionSetPtr = voidPtr;
 const sdkCallback = ffi.Function('void', [voidPtr]);
 const clickerRespondedCallback = ffi.Function('void', ['string', 'string', 'string', voidPtr]);
 
+const path = require('path');
+const libraryPath = path.join(__dirname, 'SMARTResponseSDK-2.0.dll');
+
 const sdk = ffi.Library(
-  'C:\\Program Files (x86)\\SMART Technologies\\SMART Response\\SMARTResponseSDK-2.0',
+  libraryPath,
   {
     smartresponse_sdk_initialize: ['int', ['int']],
     smartresponse_sdk_terminate: ['void', []],
