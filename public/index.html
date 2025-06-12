@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SMART Response Web</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; }
+    #questionForm input, #questionForm select { margin: 0.5em; }
+  </style>
+</head>
+<body>
+  <h1>SMART Response</h1>
+  <button id="startSession">Start Session</button>
+  <hr>
+  <div id="questionForm">
+    <h2>Ask Question</h2>
+    <select id="qtype">
+      <option value="1">Multiple Choice</option>
+      <option value="2">Multiple Answer</option>
+      <option value="3">Yes/No</option>
+      <option value="4">True/False</option>
+      <option value="5">Decimal</option>
+      <option value="6">Fractional</option>
+      <option value="7">Short Text</option>
+    </select>
+    <input type="number" id="choiceCount" placeholder="Choice Count">
+    <input type="text" id="qtext" placeholder="Question Text">
+    <input type="text" id="qanswer" placeholder="Correct Answer">
+    <button id="ask">Ask</button>
+  </div>
+  <hr>
+  <h2>Responses</h2>
+  <ul id="responses"></ul>
+</body>
+</html>
