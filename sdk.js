@@ -1,7 +1,7 @@
 'use strict';
 
-const ffi = require('ffi-napi');
-const ref = require('ref-napi');
+const ffi = require('@2060.io/ffi-napi');
+const ref = require('@2060.io/ref-napi');
 
 const voidPtr = ref.refType(ref.types.void);
 const connectionPtr = voidPtr;
